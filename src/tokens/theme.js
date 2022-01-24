@@ -1,4 +1,49 @@
-:root {
+import { createGlobalStyle } from 'styled-components'
+
+export const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+
+  @font-face {
+    font-family: 'Aesop';
+    src: url('../static/fonts/Aesop-Light.woff2') format('woff2'),
+    url('../static/fonts/Aesop-Light.woff') format('woff');
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: 'Aesop';
+    src: url('../static/fonts/Aesop-Medium.woff2') format('woff2'),
+    url('../static/fonts/Aesop-Medium.woff') format('woff');
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: 'Aesop';
+    src: url('../static/fonts/Aesop-Bold.woff2') format('woff2'),
+    url('../static/fonts/Aesop-Bold.woff') format('woff');
+    font-weight: 900;
+  }
+
+
+  body {
+    margin: 0;
+    padding: 1rem;
+    background: #eef3f7;
+    font-family: "Aesop", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  }
+
+  html {
     /* Coral */
     --color-coral-35: hsl(3, 96%, 35%);
     --color-coral-40: hsl(3, 96%, 40%);
@@ -46,4 +91,5 @@
     --color-validation-error: hsl(3, 96%, 35%);
     --color-validation-warning: hsl(45, 100%, 50%);
     --color-validation-success: var(--color-success-30);
-}
+  }
+`
